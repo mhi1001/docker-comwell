@@ -31,6 +31,28 @@ hotel_data = [
                 "amenities": ["Mini Bar", "Free Breakfast", "Jacuzzi"],
             },
         ],
+        "meetings": [
+            {
+                "_id": ObjectId(),
+                "name": "Big meeting room",
+                "description": "Spacious professional room perfect for meetings",
+                "type": "Meetings",
+                "price": 800,
+                "isBooked": False,
+                "amenities": ["WiFi", "TV", "Air Conditioning"],
+            }
+        ],
+        "parties": [
+            {
+                "_id": ObjectId(),
+                "name": "Party lounge",
+                "description": "Lounge for parties and festivities",
+                "type": "Parties",
+                "price": 600,
+                "isBooked": False,
+                "amenities": ["WiFi",],
+            }
+        ],
     },
     {
         "name": "Comwell Seaside Resort",
@@ -63,6 +85,28 @@ hotel_data = [
                 "isBooked": False,
                 "amenities": ["Coffee Maker", "Work Desk", "In-room Safe"],
             },
+        ],
+        "meetings": [
+            {
+                "_id": ObjectId(),
+                "name": "Big meeting room",
+                "description": "Spacious professional room perfect for meetings",
+                "type": "Meetings",
+                "price": 800,
+                "isBooked": False,
+                "amenities": ["WiFi", "TV", "Air Conditioning"],
+            }
+        ],
+        "parties": [
+            {
+                "_id": ObjectId(),
+                "name": "Party lounge",
+                "description": "Lounge for parties and festivities",
+                "type": "Parties",
+                "price": 600,
+                "isBooked": False,
+                "amenities": ["WiFi",],
+            }
         ],
     },
 ]
