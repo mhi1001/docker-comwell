@@ -14,12 +14,6 @@ export class Hotel extends Document {
 
   @Prop({ type: [RoomSchema], default: [] })
   rooms: Room[];
-
-  @Prop({ type: [MeetingSchema], default: [] })
-  meetings: Meeting[];
-
-  @Prop({ type: [PartySchema], default: [] })
-  parties: Party[];
 }
 
 export const HotelSchema = SchemaFactory.createForClass(Hotel);
