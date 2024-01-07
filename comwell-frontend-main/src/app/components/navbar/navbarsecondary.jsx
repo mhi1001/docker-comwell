@@ -142,6 +142,7 @@ export function NavbarSecondary() {
         guestCounts={null}
         checkindate={selectedCheckinDate}
         checkoutdate={selectedCheckoutDate}
+        bookingType={selectedBookingType}
         ></RoomSelection>
       )}
       <div className="w-full relative flex flex-col z-40 justify-between px-[80px] pt-[24px] pb-[12px] bg-[#F9F6F2] ">

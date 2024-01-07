@@ -3,8 +3,7 @@ import React, { useState, useEffect } from "react";
 import { RoomCard } from "./roomcard";
 import { getMonthName } from "@/app/utils/datehelper";
 
-export function RoomSelection({ selectedHotel, guestCounts, checkindate, checkoutdate }) {
-
+export function RoomSelection({ selectedHotel, guestCounts, checkindate, checkoutdate, bookingType }) {
 
   // Function to fetch hotels from API
   const sendBooking = async (booking) => {
@@ -39,9 +38,26 @@ export function RoomSelection({ selectedHotel, guestCounts, checkindate, checkou
 
 
   // Populate rooms of the selected hotel
-  const rooms = selectedHotel ? selectedHotel.rooms : [];
+  const allrooms = selectedHotel ? selectedHotel.rooms : [];
 
-  console.log("the rooms TEST: "+ rooms)
+  function filterRoomsbyType(allrooms){
+    let rooms = []
+
+    allrooms.forEach(room => {
+      if(room.bookingType == bookingType){
+        rooms.push(room)
+      }
+    });
+
+    return rooms
+  }
+
+
+  console.log(allrooms)
+
+  const rooms = filterRoomsbyType(allrooms)
+
+  console.log(rooms)
 
   return (
     <div className="absolute z-50 w-full flex justify-center h-screen ">
