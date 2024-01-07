@@ -38,7 +38,6 @@ export function RoomSelection({ selectedHotel, guestCounts, checkindate, checkou
   }
 
 
-
   // Populate rooms of the selected hotel
   const rooms = selectedHotel ? selectedHotel.rooms : [];
 

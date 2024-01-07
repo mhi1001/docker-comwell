@@ -4,8 +4,6 @@ export function RoomCard(room) {
 
   const amenities = room.amenities || [];
 
-  
-
     return (
       <div className="flex mt-[24px] w-full cursor-pointer">
         <img className="w-[318px] h-[239px]" src="/room.png" alt="Room Image" />

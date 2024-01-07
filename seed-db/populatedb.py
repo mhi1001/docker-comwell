@@ -19,6 +19,7 @@ hotel_data = [
                 "type": "Double",
                 "price": 200,
                 "isBooked": False,
+                "bookingType":0,
                 "amenities": ["WiFi", "TV", "Air Conditioning"],
             },
             {
@@ -28,10 +29,9 @@ hotel_data = [
                 "type": "Suite",
                 "price": 350,
                 "isBooked": False,
+                "bookingType":0,
                 "amenities": ["Mini Bar", "Free Breakfast", "Jacuzzi"],
             },
-        ],
-        "meetings": [
             {
                 "_id": ObjectId(),
                 "name": "Big meeting room",
@@ -39,10 +39,9 @@ hotel_data = [
                 "type": "Meetings",
                 "price": 800,
                 "isBooked": False,
+                "bookingType":1,
                 "amenities": ["WiFi", "TV", "Air Conditioning"],
-            }
-        ],
-        "parties": [
+            },
             {
                 "_id": ObjectId(),
                 "name": "Party lounge",
@@ -50,6 +49,7 @@ hotel_data = [
                 "type": "Parties",
                 "price": 600,
                 "isBooked": False,
+                "bookingType":2,
                 "amenities": ["WiFi",],
             }
         ],
@@ -65,6 +65,7 @@ hotel_data = [
                 "type": "Single",
                 "price": 150,
                 "isBooked": False,
+                "bookingType": 0,
                 "amenities": ["Swimming Pool", "Fitness Center", "Restaurant"],
             },
             {
@@ -74,6 +75,7 @@ hotel_data = [
                 "type": "Suite",
                 "price": 300,
                 "isBooked": False,
+                "bookingType": 0,
                 "amenities": ["Kids Play Area", "Free WiFi", "Room Service"],
             },
             {
@@ -83,10 +85,9 @@ hotel_data = [
                 "type": "Double",
                 "price": 250,
                 "isBooked": False,
+                "bookingType": 0,
                 "amenities": ["Coffee Maker", "Work Desk", "In-room Safe"],
             },
-        ],
-        "meetings": [
             {
                 "_id": ObjectId(),
                 "name": "Big meeting room",
@@ -94,10 +95,9 @@ hotel_data = [
                 "type": "Meetings",
                 "price": 800,
                 "isBooked": False,
+                "bookingType": 1,
                 "amenities": ["WiFi", "TV", "Air Conditioning"],
-            }
-        ],
-        "parties": [
+            },
             {
                 "_id": ObjectId(),
                 "name": "Party lounge",
@@ -105,9 +105,10 @@ hotel_data = [
                 "type": "Parties",
                 "price": 600,
                 "isBooked": False,
+                "bookingType": 2,
                 "amenities": ["WiFi",],
             }
-        ],
+        ]
     },
 ]
 #bcrypt.hashpw("testpassword".encode('utf-8'), bcrypt.gensalt()).decode('utf-8')

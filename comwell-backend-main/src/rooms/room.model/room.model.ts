@@ -28,6 +28,9 @@ export class Room extends Document {
   @Prop({ default: false })
   isBooked: boolean;
 
+  @Prop({ default: false })
+  bookingType: number;
+
   @Prop({ type: [String] })
   amenities?: string[];
 
