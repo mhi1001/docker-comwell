@@ -1,8 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
 import { Room, RoomSchema } from 'src/rooms/room.model/room.model';
-import { Party, PartySchema } from 'src/parties/party.model';
-import { Meeting, MeetingSchema } from 'src/meetings/meeting.model';
 
 @Schema()
 export class Hotel extends Document {
