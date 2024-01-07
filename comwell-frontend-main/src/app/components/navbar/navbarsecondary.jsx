@@ -42,6 +42,11 @@ export function NavbarSecondary() {
   const [selectedHotel, setSelectedHotel] = useState(null);
   const [selectedCheckinDate, setSelectedCheckinDate] = useState(null);
   const [selectedCheckoutDate, setSelectedCheckoutDate] = useState(null);
+  const [selectedBookingType, setSelectedBookingType] = useState(0);
+
+  function handleBookingTypeSelection(id){
+    setSelectedBookingType(id);
+  }
 
   function handleContainersToggle(id) {
     switch (id) {
@@ -148,11 +153,21 @@ export function NavbarSecondary() {
           </div>
 
           <div className="w-1/3 flex justify-center items-center gap-[14px] text-[12px] font-semibold">
-            <div className="rounded-full bg-[#AA8D65] px-[10px] py-[6px] text-white">
-              Over night
+            <div className="cursor-pointer" onClick={() => handleBookingTypeSelection(0)} >
+              {(selectedBookingType == 0) ? <div className="rounded-full bg-[#AA8D65] px-[10px] py-[6px] text-white">Over night</div>
+                : <div>Over night</div>
+              }
             </div>
-            <div>Meetings & conferences</div>
-            <div>Parties</div>
+            <div className="cursor-pointer" onClick={() => handleBookingTypeSelection(1)}> 
+              {(selectedBookingType == 1) ? <div className="rounded-full bg-[#AA8D65] px-[10px] py-[6px] text-white">Meetings & conferences</div> 
+              : <div>Meetings & conferences</div>
+              }
+            </div>
+            <div className="cursor-pointer" onClick={() => handleBookingTypeSelection(2)}>
+              {(selectedBookingType == 2) ? <div className="rounded-full bg-[#AA8D65] px-[10px] py-[6px] text-white">Parties</div>
+                : <div>Parties</div>
+              }
+            </div>
           </div>
 
           <div className="w-1/3 flex justify-end">
