@@ -1,9 +1,9 @@
 from pymongo import MongoClient
 from bson import ObjectId
-#import bcrypt
+import bcrypt
 
 # Connection parameters
-mongo_uri = "mongodb://127.0.0.1:27017"
+mongo_uri = "mongodb://mongodb:27017"
 database_name = "comwell"
 
 # Sample data
@@ -111,11 +111,12 @@ hotel_data = [
         ]
     },
 ]
+# 
 #bcrypt.hashpw("testpassword".encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
 # Test user data
 test_user_data = {
     "username": "testuser",
-    "password": "testpassword",
+    "password": bcrypt.hashpw("testpassword".encode('utf-8'), bcrypt.gensalt()).decode('utf-8'),
     "email": "testuser@example.com",
     "phone_number": "1234567890",
     "full_name": "Test User",

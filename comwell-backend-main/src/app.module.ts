@@ -13,8 +13,8 @@ import { LoggingMiddleware } from './logging.middleware';
 @Module({
   imports: [
     //mongodb = in the docker network services are called by their name
-    //MongooseModule.forRoot('mongodb://mongodb:27017/comwell'),
-    MongooseModule.forRoot('mongodb://127.0.0.1:27017/comwell'),
+    MongooseModule.forRoot('mongodb://mongodb:27017/comwell'),
+    //MongooseModule.forRoot('mongodb://127.0.0.1:27017/comwell'),
     UsersModule, HotelsModule, BookingsModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
